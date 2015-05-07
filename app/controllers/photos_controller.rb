@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-      .find_by({ :id => params[:id] })
+     @specificphoto = Photo.find_by({ :id => params[:id] })
   end
 
 end
