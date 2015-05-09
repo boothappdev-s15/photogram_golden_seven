@@ -19,8 +19,33 @@ class PhotosController < ApplicationController
     z.source=params[:the_source]
     z.save
 
-  # redirect_to("http://localhost:3000/photos")
+  redirect_to("http://localhost:3000/photos")
+
+end
+
+  def delete_row
+
+    z=Photo.find(params[:id])
+    z.destroy
+
+  redirect_to("http://localhost:3000/photos")
+  end
+
+  def edit_form
+  @photo=Photo.find_by({:id => params[:id]})
 
   end
+
+  def update_row
+
+
+    z=Photo.find(params[:id])
+    z.caption=params[:the_caption]
+    z.source=params[:the_source]
+    z.save
+    redirect_to("http://localhost:3000/photos")
+
+  end
+
 
 end
