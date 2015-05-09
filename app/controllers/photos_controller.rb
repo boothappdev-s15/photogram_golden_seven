@@ -4,10 +4,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    record_call = Photo.find(params[:id])
-    address = record_call.source
-
-    redirect_to(address)
+    @record_call = Photo.find(params[:id])
 
 
   end
