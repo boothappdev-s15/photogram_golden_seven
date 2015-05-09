@@ -11,8 +11,7 @@ class PhotosController < ApplicationController
   end
 
   def edit
-    @list_of_photos = Photo.all
-    @photo = Photo.find_by({:id => params[:id]})
+
     render('edit.html.erb')
   end
 
@@ -23,9 +22,12 @@ class PhotosController < ApplicationController
   end
 
   def new
-    @list_of_photos = Photo.all
-    @photo = Photo.find_by({:id => params[:id]})
+
     render('new.html.erb')
+  end
+
+  def update
+
   end
 
 end
