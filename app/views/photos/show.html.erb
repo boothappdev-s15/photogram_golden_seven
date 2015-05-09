@@ -1,5 +1,19 @@
 <h1> <center> <%= @caption %> </center> </h1>
 
 <h2><center>
-<img src="<%= @source %>" align= "middle">
+<img src="<%= @source %>" align= "middle" width="720">
 </center> </h2>
+
+<table>
+  <tr>
+  <td>
+      <a href="http://localhost:3000/photos">Back</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/photos/<%= @id %>/edit">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/delete_photo/<%= @id %>">Delete</a>
+    </td>
+  </tr>
+</table>
