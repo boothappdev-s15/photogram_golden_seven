@@ -48,7 +48,7 @@ def edit
 
     p = Photo.find_by ({:id => @pic_id})
 
-    @caption = p.caption
+    @caption = p.caption.to_str
     @source = p.source
 end
 
@@ -60,12 +60,12 @@ def save_edit
 
     p = Photo.find_by ({:id => @pic_id})
 
-    p.caption = @caption
+    p.caption = @caption.to_str
     p.source = @source
 
     p.save
 
-    redirect_to('http://localhost:3000/photos/<%= @pic_id %>')
+    render 'show'
 
 
 end
