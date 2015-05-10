@@ -14,11 +14,17 @@ class PhotosController < ApplicationController
 
   def create_row
 
-  #  raise params.inspect
   p = Photo.new
   p.source = params[:the_source]
   p.caption = params[:the_caption]
   p.save
+
+  redirect_to("http://localhost:3000/photos")
+  end
+
+  def destroy
+  p = Photo.find(params[:id])
+  p.destroy
 
   redirect_to("http://localhost:3000/photos")
   end
