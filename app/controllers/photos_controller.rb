@@ -13,10 +13,28 @@ class PhotosController < ApplicationController
 
   def create_row
     p=Photo.new
-    p.caption = params[:caption]
-    p.url = params[:image_url]
+    p.source=params[:the_source]
+    p.caption=params[:the_caption]
     p.save
-    redirect_to("http://localhost:3000/photos")
+    redirect_to("/photos")
+  end
+
+  def destroy
+    p=Photo.find(params[:id])
+    p.delete
+    redirect_to("/photos")
+  end
+
+  def edit_form
+    @photo=Photo.find(params[:id])
+  end
+
+  def update_row
+    p=Photo.find(params[:id])
+    p.source=params[:the_source]
+    p.caption=params[:the_caption]
+    p.save
+    redirect_to("/photos")
   end
 
 end
