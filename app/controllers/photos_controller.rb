@@ -5,9 +5,9 @@ class PhotosController < ApplicationController
 
 
   def show
-    id = params[:id].to_i
+    @id = params[:id].to_i
 
-    @p = Photo.find(id)
+    @p = Photo.find(@id)
 
     @source = @p.source
     @caption = @p.caption
