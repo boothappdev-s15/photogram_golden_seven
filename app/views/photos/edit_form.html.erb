@@ -1,0 +1,22 @@
+<h1>Edit a photo</h1>
+ <% @list_of_photos.each do |photo| %>
+<form action="http://localhost:3000/edit_photo">
+  <div>
+    <label for="photo_caption">Caption:</label>
+    <input id="photo_caption" type="text" name="the_caption" value="<%= photo.caption %>">
+  </div>
+  <div>
+    <label for="photo_image_url">Image URL:</label>
+    <input id="photo_image_url" type="text" name="the_source" value="<%= photo.source %>">
+  </div>
+  <div>
+    <div>
+    <label for="photo_image_id">Image ID:</label>
+    <input readonly id="photo_image_id" type="text" name="id"  value="<%= photo.id %>">
+  </div>
+  </div>
+  <div>
+    <button>Edit Photo</button>
+  </div>
+</form>
+<%end%>
