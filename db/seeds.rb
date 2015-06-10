@@ -34,6 +34,10 @@ photo_info = [
   {
     :source => "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/1280px-Biandintz_eta_zaldiak_-_modified2.jpg",
     :caption => "Biandintz"
+  },
+  {
+    :source => "http://i.imgur.com/Ok58l4J.jpg",
+    :caption => "Hard to make 75k"
   }
 ]
 
