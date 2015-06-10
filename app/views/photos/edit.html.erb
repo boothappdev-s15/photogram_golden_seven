@@ -1,0 +1,19 @@
+<h1>Edit</h1>
+
+<form action = "http://localhost:3000/photos/save_edit/<%= @pic_id %>">
+  <div>
+    <label>Caption:</label>
+    <input name = "caption" type = "text" value = "<%= @caption %>">
+  </div>
+
+  <div>
+    <p></p>
+  </div>
+
+  <div>
+    <label>Image URL:</label>
+    <input name = "source" type = "text" value = "<%= @source %>" >
+    <button>Save Edit</button>
+  </div>
+
+</form>
