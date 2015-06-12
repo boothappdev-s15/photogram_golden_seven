@@ -11,7 +11,7 @@
   <% @list_of_photos.each do |photo| %>
   <tr>
     <td>
-      <img src="<%= photo.source %>" width="80">
+      <a href="http://localhost:3000/photos/<%= photo.id %>"><img src="<%= photo.source %>" width="80"></a>
     </td>
     <td>
       <%= photo.caption %>
