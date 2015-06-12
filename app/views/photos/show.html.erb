@@ -1,0 +1,13 @@
+<h1>Photo Details</h1>
+
+<a href="http://localhost:3000/photos/">Go Home</a>
+<div>
+  <% @list_of_photos.each do |photo| %>
+
+      <img src="<%= photo.source %>" width="80%">
+<p>
+      Caption: <%= photo.caption %>
+</p>
+</div>
+  <% end %>
+
