@@ -1,0 +1,29 @@
+<h1>Photo Details</h1>
+
+<!-- td's not needed apparently -->
+
+<td>
+  <img src="<%= @photo.source %>" width="680">
+</td>
+
+<h1>
+</h1>
+
+<td>
+  <%= @photo.caption %>
+</td>
+
+<h1>
+</h1>
+
+<a href="http://localhost:3000/photos">Back</a>
+
+<td>
+  <a href="http://localhost:3000/photos/<%= @photo.id %>/edit">Edit</a>
+</td>
+<td>
+  <a href="http://localhost:3000/delete_photo/<%= @photo.id %>">Delete</a>
+</td>
+
+<!-- 
+# all i did in this tab was add @ before the photo because it's an instance variable, the remainder i copy pasted in from index.  -->
